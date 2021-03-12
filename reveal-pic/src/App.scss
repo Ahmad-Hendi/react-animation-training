@@ -1,0 +1,33 @@
+.main{
+  background-color: rgb(105, 105, 105);
+  .container{
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden; // To avoid the flash when we reload the page
+  }
+}
+
+
+
+.img-container{
+  width: 800px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  &:after { // this after is belong to img-container and because it's absolute so it's relaterd the img-container with the position relative
+    content: '';
+    position: absolute;
+    width: 100%; // so it will be 100% width from the img-container
+    height: 100%; // so it will be 100% height from the img-container
+    top: 0; 
+    right: 0;
+    background-color: rgb(105, 105, 105);
+  }
+  img {
+    width: 800px;
+    position: absolute;
+  }
+}
